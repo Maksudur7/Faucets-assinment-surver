@@ -1,10 +1,10 @@
 var express = require('express')
-const GetOpr = require('../../models/GetOpration')
+const PostOpr = require('../../models/PostOpration/PostOpration')
 
 var router = express.Router()
 
-router.get('/getoprs', async(req, res) =>{
-    const cursor = await GetOpr.find()
+router.get('/postoprs', async(req, res) =>{
+    const cursor = await PostOpr.find()
     res.send(cursor)
 })
 

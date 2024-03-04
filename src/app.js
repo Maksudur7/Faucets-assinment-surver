@@ -8,8 +8,10 @@ const port = process.env.PORT || 5000
 
 
 const GetRoutes = require("./routes/GetData/index")
+const PostRoutes = require("./routes/PostData/index")
 applyMiddleware(app)
 app.use(GetRoutes)
+app.use(PostRoutes)
 
 
 app.get('/', (req, res) => {

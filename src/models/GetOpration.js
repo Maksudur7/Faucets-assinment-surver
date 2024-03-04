@@ -2,13 +2,16 @@ const { Schema, model } = require('mongoose');
 
 const GetSchema = new Schema({
     name: {
-        type: String
+        type: String,
+        require: true
     },
     email: {
-        type: String
+        type: String,
+        require: true
     },
     photo: {
-        type: String
+        type: String,
+        require: true
     }
 })
 
