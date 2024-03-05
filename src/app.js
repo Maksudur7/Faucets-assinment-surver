@@ -2,9 +2,9 @@ require('./db/connectDB')
 const express = require('express')
 const applyMiddleware = require('./middlewares/applyMiddleware')
 const connectDB = require('./db/connectDB')
-require('dotenv').config()
+// require('dotenv').config()
 const app = express()
-const port = process.env.PORT || 5000
+// const port = process.env.PORT || 5000
 
 
 const GetRoutes = require("./routes/GetData/index")
@@ -30,11 +30,7 @@ app.use((err, req, res, next) => {
   })
 })
 
-const main = async () => {
-  await connectDB();
-  app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-  })
-}
 
-main()
+
+// main()
+module.exports = app
